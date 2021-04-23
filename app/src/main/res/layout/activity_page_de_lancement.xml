@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bleu"
+    android:fitsSystemWindows="true"
+    tools:context=".PageDeLancement">
+
+    <ImageView
+        android:id="@+id/logoTouggia"
+        android:contentDescription="@string/logoDescription"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/deuxCent"
+        android:padding="@dimen/margeCinq"
+        android:src="@drawable/touggia_only"
+        android:layout_marginTop="@dimen/margeHautCinquante"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/blocTouggia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/logoTouggia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/touggia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true"
+            android:text="@string/touggiaMaj"
+            android:textAlignment="center"
+            android:fontFamily="@font/sanfrancisco_black"
+            android:textColor="@color/blanc"
+            android:textSize="@dimen/tailleSoixante"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descTouggia"
+            android:textColor="@color/blanc"
+            android:textSize="@dimen/tailleQuinze"
+            android:keepScreenOn="true"
+            android:fontFamily="@font/sanfrancisco_bold"
+            android:textAlignment="center"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/barreDeProgression"
+            android:layout_width="@dimen/margeQuarante"
+            android:layout_height="@dimen/margeQuarante"
+            android:layout_gravity="center"
+            app:SpinKit_Style="Circle"
+            app:SpinKit_Color="@color/blanc"
+            android:layout_marginTop="@dimen/margeHautCinquante"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blanc"
+                android:textSize="@dimen/tailleDouze"
+                android:text="@string/siliddorInc"
+                android:fontFamily="@font/sanfrancisco_regular"
+                android:textAlignment="center"
+                android:layout_marginBottom="@dimen/margeCinq"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColor="@color/blanc"
+               android:textSize="@dimen/tailleDouze"
+               android:text="@string/tDroitReserves"
+               android:fontFamily="@font/sanfrancisco_regular"
+               android:textAlignment="center"
+               android:layout_marginBottom="@dimen/margeQuinze"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
