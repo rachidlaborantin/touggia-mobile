@@ -26,4 +26,5 @@ Version Desktop : [Touggia Desktop](https://github.com/rachidlaborantin/touggia)
 
 ## 📜 Historique
 
-- **15 mai 2023** → Version mobile fonctionnelle.  
+- **15 mai 2023:** Version mobile fonctionnelle et mise à jour
+- **1er août 2025:** Prise en charge par Silicofyn et début de la migration vers **Kotlin** et les technologies mobiles modernes
